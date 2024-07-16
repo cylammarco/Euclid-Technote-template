@@ -1,7 +1,7 @@
 \documentclass[11pt]{EuclidVIS}
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
-\usepackage[top=1.9cm, bottom=5.6cm, left=2.5cm, right=2.5cm]{geometry} 
+\usepackage[top=1.9cm, bottom=5.4 cm, left=2.5cm, right=2.5cm]{geometry} 
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsfonts}
@@ -9,6 +9,7 @@
 \usepackage{fancyhdr}
 \usepackage{multirow}
 \usepackage{tabularx}
+\usepackage{subcaption}
 \usepackage{lastpage}
 \usepackage[usenames, dvipsnames, svgnames, table]{xcolor} 
 \usepackage[nodayofweek]{datetime}
@@ -17,19 +18,15 @@
 \usepackage[labelfont={color=MidnightBlue,bf}, textfont={color=MidnightBlue}]{caption}
 \usepackage{appendix}
 \usepackage{gensymb}
-\usepackage[pdfauthor={Lance Miller}, bookmarks=true, colorlinks=true, linktoc=section, linkcolor=black, draft]{hyperref} 
+%
+% UPDATE YOUR NAME HERE
+%
+\usepackage[pdfauthor={YOUR NAME}, bookmarks=true, colorlinks=true, linktoc=section, linkcolor=black]{hyperref} 
 \usepackage{tocloft} 
 \usepackage[ulem=normalem]{changes} 
 \usepackage{pifont}
-
-\usepackage{graphicx,epstopdf}
 \usepackage{natbib}
 \usepackage{url}
-
-\epstopdfsetup{suffix=}
-\epstopdfsetup{update}
-\DeclareGraphicsExtensions{.ps}
-\epstopdfDeclareGraphicsRule{.ps}{pdf}{.pdf}{ps2pdf -dEPSCrop -dNOSAFER #1 \OutputFile}
 
 
 \newcommand{\la}{\,\rlap{\raise 0.5ex\hbox{$<$}}{\lower 1.0ex\hbox{$\sim$}}\,}
@@ -113,18 +110,20 @@
 %----------------------------------------------------------------------------------------
 \definecolor{light-gray}{gray}{0.5}
 
-\color{light-gray}{
-\fancyhead[C]{\begin{tabular}{| l | c | r | l |}
-\hline
-%\multirow{4}{*}{\includegraphics[width=2cm]{logosmall.png}} % LOGO
-\multirow{4}{*}{\Huge{EC}} % LOGO
-&\multirow{4}{*}{\pbox{7.5cm}{\Large{VIS PSF thermal stability}}}
-&\textbf{Ref.:} & EUCL-OXF-TN-8-019 \\
-&&\textbf{Issue:} & 1.0 \\ 
-&&\textbf{Date:} & 29$^{\rm th}$\,November 2023 \\ 
-&&\textbf{Page:} & \thepage/{\hypersetup{linkcolor=light-gray}\pageref{LastPage}} \\
-\hline
-\end{tabular}}
+\fancyhead[C]{
+    \color{light-gray}{
+        \begin{tabular}{| l | c | r | l |}
+        \hline
+        \multirow{4}{*}{\includegraphics[width=2cm]{logo.png}} % LOGO
+        %\multirow{4}{*}{\Huge{EC}} % LOGO
+        &\multirow{4}{*}{\pbox{7.5cm}{\Large{SOME TOPIC}}}
+        &\textbf{Ref.:} & EUCL-EDI-TN-?-??? \\
+        &&\textbf{Issue:} & 1.0 \\ 
+        &&\textbf{Date:} & 16$^{\rm th}$\,July 2024 \\ 
+        &&\textbf{Page:} & \thepage/{\hypersetup{linkcolor=light-gray}\pageref{LastPage}} \\
+        \hline
+        \end{tabular}
+    }
 }
 %----------------------------------------------------------------------------------------
 %	FOOTER INFORMATION
@@ -135,7 +134,6 @@ The presented document is Proprietary information of the Euclid Consortium. This
 
 \begin{document}
 \color{black}
-\hypersetup{citecolor=blue}
 
 %----------------------------------------------------------------------------------------
 %   FRONT PAGE
